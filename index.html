@@ -1,20 +1,40 @@
 <!doctype html>
 <html>
-  <head>
-      
-      <!-- To use jQuery, add library reference here -->
-      
-      <style>
-      
-      </style>
-      
-      <script type="text/javascript">
-      
-      </script>
+    <head>
+        
+        <!-- CTR + OPT + I: formats HTML -->
 
-  </head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-  <body>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
-  </body>
+        <script src="https://code.jquery.com/color/jquery.color-2.2.0.min.js" integrity="sha256-aSe2ZC5QeunlL/w/7PsVKmV+fa0eDbmybn/ptsKHR6I=" crossorigin="anonymous"></script>
+
+        <style>
+
+        </style>
+
+        <script type="text/javascript">
+
+        </script>
+
+    </head>
+
+    <body>
+        <button id="go">Simple</button>
+        <button id="sat">Desaturate</button>
+        <div id="block">Hello!</div>
+        <script>
+            $( "#go" ).on( "click", function() {
+                $( "#block" ).animate( {
+                    backgroundColor: "#abcdef"
+                }, 1500 );
+            });
+            $( "#sat" ).on( "click", function() {
+                $( "#block" ).animate( {
+                    backgroundColor: jQuery.Color({ saturation: 0 })
+                }, 1500 );
+            });
+        </script>
+    </body>
 </html>
